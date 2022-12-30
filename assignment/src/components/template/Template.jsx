@@ -1,10 +1,12 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Avatar from '../Card/Avatar/Avatar'
 import Heading from '../Card/Heading/Heading'
 
 export default function Template(el) {
   return (
-    <div style={{ border: '2px solid grey', display:'grid', justifyContent:'center', width:'100%', height:'400px', borderRadius:'20px' }} >
+    <div style={{  display:'grid', boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px',
+     justifyContent:'center', width:'100%', height:'400px', borderRadius:'20px' }} >
         
         <Avatar name={el.name.name} />
         <div style={{  marginBottom:'-20px'}} >
@@ -39,8 +41,16 @@ export default function Template(el) {
 
         </div>
 
-        <button style={{ marginBottom:'20px', borderRadius:'20px',
-         width:'40%', margin:'auto', marginTop:'-10px', height:'40px'  }} >More Details</button>
+          
+           
+        <button style={{ marginBottom:'20px', borderRadius:'20px',border:'0',
+         width:'40%', margin:'auto', marginTop:'-10px', height:'40px'  }} >
+           
+           <Link style={{textDecoration:'none', color:'black', fontSize:'16px'}}
+           to={`/detail/${el.id}`} ><span>
+           <i className="fa-solid fa-circle-info fa-lg "style={{marginRight:'15px'}} ></i>
+         </span>More Details</Link>
+             </button>
 
 
 

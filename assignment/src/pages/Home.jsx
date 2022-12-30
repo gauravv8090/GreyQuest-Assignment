@@ -48,9 +48,9 @@ export default function Home() {
     <div style={{display:'grid', gridTemplateColumns:'repeat(2, 1fr)',gap:'20px', width:'80%', margin:'auto' , marginTop:'50px' }} >
         {
             userList.map((el)=>{
-                return <div key={el.id}  >
+                return <div key={el.id} style={{  }} >
                     {/* <Heading name={el.email} /> */}
-                    <Template name={el} email={el} username={el} phone={el} address={el.address} />
+                    <Template name={el} email={el} username={el} phone={el} address={el.address} id={el.id}  />
 
 
                 </div>

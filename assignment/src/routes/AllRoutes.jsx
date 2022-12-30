@@ -9,7 +9,7 @@ export default function AllRoutes() {
   return (
     <Routes>
         <Route path='/' element={<Home/>}  ></Route>
-        <Route path='/detail' element={<UserDetail/>} ></Route>
+        <Route path='/detail/:id' element={<UserDetail/>} ></Route>
     </Routes>
 
   )

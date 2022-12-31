@@ -5,6 +5,7 @@ import axios  from 'axios';
 import { useEffect } from 'react';
 import { getuserlist } from '../redux/userSlice';
 import Template from '../components/template/Template';
+import { CircularProgress } from "react-loading-indicators";
 
 export default function Home() {
 
@@ -36,7 +37,9 @@ export default function Home() {
     }, [])
 
     if(loading){
-        return <h1>Loading....</h1>
+        return <div className='loading' >
+            <CircularProgress color='skyblue' size='large' />
+        </div> 
     }
 
     if(error){

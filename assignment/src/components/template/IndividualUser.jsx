@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import IndiAvatar from '../Atoms/Avatar/IndiAvatar'
 import Heading from '../Atoms/Heading/Heading'
 
@@ -49,6 +50,13 @@ export default function IndividualUser(el) {
         <Heading email={el.name.address.street} /><h2>, </h2>
         <Heading email={el.name.address.suite} />
         </div>
+
+        
+          <button className='indibtn' >
+            <Link to={'/'} className='linkcss' >Back</Link>
+            </button>
+          
+        
 
 
         </div>

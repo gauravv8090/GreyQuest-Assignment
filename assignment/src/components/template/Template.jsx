@@ -42,18 +42,11 @@ export default function Template(el) {
            
         <button className='tempbtn' >
            
-           <Link style={{textDecoration:'none', color:'black', fontSize:'16px'}}
+           <Link className='linkcss'
            to={`/detail/${el.id}`} ><span>
            <i className="fa-solid fa-circle-info fa-lg "style={{marginRight:'15px'}} ></i>
          </span>More Details</Link>
              </button>
-
-
-
-
-
-
-
 
     </div>
   )

@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { getuserdetail } from '../redux/userSlice';
 import IndividualUser from '../components/template/IndividualUser';
+import { CircularProgress } from 'react-loading-indicators';
 
 export default function UserDetail() {
 
@@ -40,7 +41,9 @@ export default function UserDetail() {
     }, [])
 
     if(loading){
-        return <h1>Loading....</h1>
+        return <div className='loading' >
+        <CircularProgress size='large' color='skyblue' />
+    </div> 
     }
 
     if(error){

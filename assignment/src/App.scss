@@ -1,131 +1,146 @@
-$maincolor : rgb(176, 221, 236);
+$maincolor: rgb(176, 221, 236);
 $alignment: center;
-$main-display: $main-display;
+$main-display: flex;
 $main-justify-content: center;
 
-.AvatarBox{
-    width:100%;
-    display:$main-display;
-    align-items:$alignment;
-    justify-content:$main-justify-content;
-    /* border: 1px solid red; */
+@mixin width($value) {
+  width: $value;
+}
+@mixin height($value) {
+  height: $value;
+}
+@mixin bd-radious($value) {
+  border-radius: $value;
+}
+
+.AvatarBox {
+  @include width(100%);
+  display: $main-display;
+  align-items: $alignment;
+  justify-content: $main-justify-content;
+  /* border: 1px solid red; */
+}
+
+.Avatar {
+  @include height(100px);
+  display: $main-display;
+  align-items: $alignment;
+  justify-content: $main-justify-content;
+  margin: auto;
+  @include width(100px);
+  @include bd-radious(50%);
+  background-color: $maincolor;
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+.indiavatar {
+  display: grid;
+  align-items: baseline;
+  padding: 60px;
+}
+.indiavatardiv {
+  @include height(150px);
+  display: $main-display;
+  align-items: $alignment;
+  justify-content: $main-justify-content;
+  @include width(150px);
+  @include bd-radious(50%);
+  background-color: rgb(127, 177, 218);
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
+
+.indiuserDiv {
+  display: $main-display;
+  align-items: $alignment;
+}
+
+.template {
+  display: grid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  justify-content: $main-justify-content;
+  @include width(100%);
+  @include height(420px);
+  @include bd-radious(20px);
+}
+
+.tempcontent {
+  display: $main-display;
+  margin: auto;
+  gap: 40px;
+  margin-top: -20px;
+  align-items: $alignment;
+  justify-content: space-around;
+  @include width(100%);
+}
+
+.tempdata {
+  display: $main-display;
+  align-items: $alignment;
+}
+.temphead {
+  margin-bottom: -20px;
+  text-align: center;
+  font-size: larger;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.tempphone {
+  display: $main-display;
+  margin: auto;
+  gap: 40px;
+  margin-top: -35px;
+  align-items: $alignment;
+  justify-content: space-around;
+  @include width(100%);
+}
+.tempbtn {
+  margin-bottom: 20px;
+  @include bd-radious(20px);
+  border: 0;
+  @include width(40%);
+  margin: auto;
+  margin-top: -10px;
+  @include height(40px);
+}
+
+.individualCard {
+  @include width(40%);
+  @include height(650px);
+  @include bd-radious(20px);
+  display: $main-display;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  @include width(80%);
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.WholeIndividualPage {
+  @include width(100%);
+  @include height(95vh);
+  display: $main-display;
+  justify-content: $main-justify-content;
+  align-items: $alignment;
+}
+.indicontent {
+  @include width(60%);
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.indiheading {
+  text-align: center;
+}
+
+@media all and (min-width: 0px) and (max-width: 1300px) {
+  .home {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
-  
-  .Avatar{
-    height:100px;
-    display:$main-display;
-    align-items:$alignment;
-    justify-content:$main-justify-content;
-    margin: auto;
-       width:100px;
-      border-radius: 50%;
-       background-color: $maincolor;
-       margin-top: 15px;
-        margin-bottom: -10px;
-      }
-      .indiavatar{
-        display: grid;
-        align-items:baseline;
-        padding: 60px;
-  
-      }
-      .indiavatardiv{
-       height: 150px;
-       display: $main-display;
-       align-items: $alignment;
-       justify-content: $main-justify-content;
-       width: 150px;
-       border-radius: 50%;
-       background-color: rgb(127, 177, 218);
-       margin-top: 15px;
-       margin-bottom: -10px;
-      }
-  
-      .indiuserDiv{
-        display: $main-display;
-        align-items: $alignment;
-      }
-  
-      .template{
-       display: grid;
-       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-       justify-content: $main-justify-content;
-       width: 100%;
-       height: 420px;
-       border-radius: 20px;
-      }
-  
-      .tempcontent{
-          display: $main-display;
-          margin: auto;
-          gap: 40px;
-          margin-top: -20px;
-          align-items: $alignment;
-          justify-content: space-around;
-          width: 100%;
-      }
-  
-      .tempdata{  
-        display: $main-display;
-        align-items:$alignment;
-      }
-      .temphead{  
-        margin-bottom: -20px;
-        text-align: center;
-        font-size: larger;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-      }
-  
-      .tempphone{
-          display: $main-display;
-          margin: auto;
-          gap: 40px;
-          margin-top: -35px;
-          align-items: $alignment;
-          justify-content: space-around;
-          width: 100%;
-      }
-      .tempbtn{
-           margin-bottom: 20px;
-           border-radius: 20px;
-           border: 0;
-           width: 40%;
-           margin: auto;
-           margin-top: -10px;
-           height: 40px;
-      }
-  
-  .individualCard {
-    width: 40%;
-    height: 650px;
-    border-radius: 20px;
-    display: $main-display;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  }
-  .home{
-       display: grid;
-       grid-template-columns: repeat(2, 1fr);
-       gap: 20px;
-       width: 80%;
-       margin: auto;
-       margin-top: 50px;
-       padding-bottom: 50px;
-  }
-  .WholeIndividualPage{
-    width: 100%;
-    height: 95vh;
-    display: $main-display;
-    justify-content: $main-justify-content;
-    align-items: $alignment;
-  }
-  .indicontent{
-  
-    width: 60%;
-    margin-left: 50px;
-    margin-top: 50px;
-  }
-  
-  
-  .indiheading{
-    text-align: center;
-  }
+}

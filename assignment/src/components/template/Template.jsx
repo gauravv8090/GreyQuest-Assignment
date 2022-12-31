@@ -1,26 +1,24 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Avatar from '../Card/Avatar/Avatar'
-import Heading from '../Card/Heading/Heading'
+import Avatar from '../Atoms/Avatar/Avatar'
+import Heading from '../Atoms/Heading/Heading'
 
 export default function Template(el) {
   return (
-    <div style={{  display:'grid', boxShadow:'rgba(0, 0, 0, 0.24) 0px 3px 8px',
-     justifyContent:'center', width:'100%', height:'400px', borderRadius:'20px' }} >
+    <div className='template' style={{  }} >
         
         <Avatar name={el.name.name} />
-        <div style={{  marginBottom:'-20px'}} >
+        <div className='temphead' >
         <Heading name={el.name.name} />
         </div>
 
-        <div style={{display:'flex',margin:'auto', gap:'40px', marginTop:'-20px',
-        alignItems:'center', justifyContent:'space-around', width:'100%'}} >
+        <div className='tempcontent' >
 
-        <div style={{display:'flex', alignItems:'center'}} >
+        <div className='tempdata' >
         <i className="fa-solid fa-user fa-xl" style={{marginRight:'15px'}} ></i>
         <Heading username={el.username.username} />
         </div>
-        <div style={{display:'flex', alignItems:'center'}} >
+        <div className='tempdata' >
         <i className="fa-solid fa-envelope fa-xl "style={{marginRight:'15px'}} ></i>
         <Heading email={el.email.email} />
         </div>
@@ -30,11 +28,11 @@ export default function Template(el) {
         <div style={{display:'flex',margin:'auto', gap:'40px', marginTop:'-35px',
         alignItems:'center', justifyContent:'space-around', width:'100%'}} >
 
-        <div style={{display:'flex', alignItems:'center'}} >
+        <div className='tempdata' >
         <i className="fa-solid fa-phone fa-xl" style={{marginRight:'15px'}} ></i>
         <Heading username={el.phone.phone} />
         </div>
-        <div style={{display:'flex', alignItems:'center'}} >
+        <div className='tempdata' >
         <i className="fa-solid fa-city fa-xl "style={{marginRight:'15px'}} ></i>
         <Heading email={el.address.city} />
         </div>

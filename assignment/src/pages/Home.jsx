@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import axios  from 'axios';
 import { useEffect } from 'react';
 import { getuserlist } from '../redux/userSlice';
-import Heading from '../components/Card/Heading/Heading';
 import Template from '../components/template/Template';
 
 export default function Home() {

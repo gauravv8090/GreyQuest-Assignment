@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import axios from 'axios';
 import { getuserdetail } from '../redux/userSlice';
-import Template from '../components/template/Template';
+import IndividualUser from '../components/template/IndividualUser';
 
 export default function UserDetail() {
 
@@ -12,7 +12,7 @@ export default function UserDetail() {
     console.log(id); 
 
     
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [error, setError] = useState(false);
     // const [data, setData] = useState({});
 
@@ -50,11 +50,10 @@ export default function UserDetail() {
 
 
   return (
-    <div>
-        {
-            userDetail && <Template name={userDetail} email={userDetail} username={userDetail}
-            phone={userDetail} address={userDetail.address} id={userDetail.id} />
-        }
+    <div  className='WholeIndividualPage'  >
+          
+          <IndividualUser name={userDetail} avatar={userDetail} address={userDetail}   />
+
         
     </div>
   )

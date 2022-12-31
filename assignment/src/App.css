@@ -1,77 +1,98 @@
-
-.AvatarBox{
-  width:100%;
-  display:flex;
-  align-items:center;
-  justify-content:'center';
+.AvatarBox {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: "center";
   /* border: 1px solid red; */
 }
 
-.Avatar{
-  height:100px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.Avatar {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: auto;
-     width:100px;
-    border-radius: 50%;
-     background-color: skyblue;
-     margin-top: 15px;
-      margin-bottom: -10px;
-    }
-    .indiavatar{
-      display: grid;
-      align-items:baseline;
-      padding: 60px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: rgb(176, 221, 236);
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
 
-    }
-    .indiavatardiv{
-     height: 150px;
-     display: flex;
-     align-items: center;
-     justify-content: center;
-     width: 150px;
-     border-radius: 50%;
-     background-color: rgb(127, 177, 218);
-     margin-top: 15px;
-     margin-bottom: -10px;
-    }
+.indiavatar {
+  display: grid;
+  align-items: baseline;
+  padding: 60px;
+}
 
-    .indiuserDiv{
-      display: flex;
-      align-items: center;
-    }
+.indiavatardiv {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  border-radius: 50%;
+  background-color: rgb(127, 177, 218);
+  margin-top: 15px;
+  margin-bottom: -10px;
+}
 
-    .template{
-     display: grid;
-     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-     justify-content: center;
-     width: 100%;
-     height: 420px;
-     border-radius: 20px;
-    }
+.indiuserDiv {
+  display: flex;
+  align-items: center;
+}
 
-    .tempcontent{
-        display: flex;
-        margin: auto;
-        gap: 40px;
-        margin-top: -20px;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-    }
+.template {
+  display: grid;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  justify-content: center;
+  width: 100%;
+  height: 420px;
+  border-radius: 20px;
+}
 
-    .tempdata{  
-      display: flex;
-      align-items: center;
-    }
-    .temphead{  
-      margin-bottom: -20px;
-      text-align: center;
-      font-size: larger;
-      font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    }
-    
+.tempcontent {
+  display: flex;
+  margin: auto;
+  gap: 40px;
+  margin-top: -20px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tempdata {
+  display: flex;
+  align-items: center;
+}
+
+.temphead {
+  margin-bottom: -20px;
+  text-align: center;
+  font-size: larger;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.tempphone {
+  display: flex;
+  margin: auto;
+  gap: 40px;
+  margin-top: -35px;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tempbtn {
+  margin-bottom: 20px;
+  border-radius: 20px;
+  border: 0;
+  width: 40%;
+  margin: auto;
+  margin-top: -10px;
+  height: 40px;
+}
+
 .individualCard {
   width: 40%;
   height: 650px;
@@ -80,7 +101,17 @@
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-.WholeIndividualPage{
+.home {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.WholeIndividualPage {
   width: 100%;
   height: 95vh;
   border: 2px solid purple;
@@ -88,14 +119,13 @@
   justify-content: center;
   align-items: center;
 }
-.indicontent{
 
+.indicontent {
   width: 60%;
   margin-left: 50px;
   margin-top: 50px;
 }
 
-
-.indiheading{
+.indiheading {
   text-align: center;
-}
+}/*# sourceMappingURL=App.css.map */

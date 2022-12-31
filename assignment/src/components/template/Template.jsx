@@ -25,8 +25,7 @@ export default function Template(el) {
 
         </div>
 
-        <div style={{display:'flex',margin:'auto', gap:'40px', marginTop:'-35px',
-        alignItems:'center', justifyContent:'space-around', width:'100%'}} >
+        <div className='tempphone' >
 
         <div className='tempdata' >
         <i className="fa-solid fa-phone fa-xl" style={{marginRight:'15px'}} ></i>
@@ -41,8 +40,7 @@ export default function Template(el) {
 
           
            
-        <button style={{ marginBottom:'20px', borderRadius:'20px',border:'0',
-         width:'40%', margin:'auto', marginTop:'-10px', height:'40px'  }} >
+        <button className='tempbtn' >
            
            <Link style={{textDecoration:'none', color:'black', fontSize:'16px'}}
            to={`/detail/${el.id}`} ><span>
